@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>轮回·撕卡 — 选角 Mockup</title>
+<style>
+  :root{
+    --bg:#0c0a0d; --panel:#16121a; --panel2:#1d1820;
+    --blood:#b5121b; --blood2:#e23b44; --ink:#e8e2d9; --muted:#8a8290;
+    --gold:#caa45a; --line:#2a2330;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(900px 500px at 50% -10%, #2a0d10 0%, transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family:"PingFang SC","Noto Serif SC",serif;
+    min-height:100vh;padding:28px 18px 60px;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+  /* 顶栏循环 */
+  .loop{display:flex;align-items:center;justify-content:center;gap:10px;
+    color:var(--muted);font-size:13px;letter-spacing:1px;margin-bottom:18px;flex-wrap:wrap}
+  .loop b{color:var(--blood2)}
+  .loop span.sep{color:#4a4350}
+  h1{font-size:42px;letter-spacing:8px;text-align:center;font-weight:800;
+    background:linear-gradient(180deg,#fff,#b5121b 140%);-webkit-background-clip:text;
+    background-clip:text;color:transparent;text-shadow:0 0 30px rgba(181,18,27,.25)}
+  .sub{text-align:center;color:var(--muted);margin:8px 0 26px;font-size:14px;letter-spacing:3px}
+  .label{display:flex;align-items:center;gap:10px;color:var(--gold);
+    font-size:15px;letter-spacing:4px;margin:8px 4px 16px}
+  .label::before,.label::after{content:"";height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);flex:1}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:14px}
+  .card{
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;
+    cursor:pointer;transition:.18s;overflow:hidden;
+  }
+  .card::before{content:"";position:absolute;inset:0;border-radius:14px;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);pointer-events:none}
+  .card:hover{transform:translateY(-4px);border-color:var(--blood);
+    box-shadow:0 10px 30px rgba(181,18,27,.28)}
+  .sect{position:absolute;top:12px;right:12px;font-size:11px;letter-spacing:2px;
+    padding:3px 8px;border-radius:20px;border:1px solid var(--line);color:var(--muted)}
+  .s-blood{color:#e7707a;border-color:#5a1f24}
+  .s-mech{color:#7fb6d6;border-color:#1f3a4a}
+  .s-weird{color:#b89be0;border-color:#382a52}
+  .s-fate{color:#e0c66a;border-color:#4a3f1c}
+  .s-undead{color:#86b58a;border-color:#234a2a}
+  .por{width:64px;height:64px;border-radius:50%;margin-bottom:12px;
+    display:flex;align-items:center;justify-content:center;font-size:30px;
+    background:radial-gradient(circle at 35% 30%,#2a2230,#0e0b12);
+    border:1px solid var(--line)}
+  .name{font-size:18px;font-weight:700;letter-spacing:1px}
+  .name small{display:block;color:var(--muted);font-size:12px;font-weight:400;
+    letter-spacing:2px;margin-top:2px}
+  .bio{color:#b3aab6;font-size:12.5px;line-height:1.7;margin:11px 0 13px;
+    height:88px;overflow:hidden}
+  .skill{background:#0e0b12;border:1px solid var(--line);border-radius:9px;padding:9px 11px}
+  .skill .sk-name{color:var(--blood2);font-size:13px;font-weight:700;letter-spacing:1px}
+  .skill .sk-desc{color:var(--muted);font-size:11.5px;line-height:1.6;margin-top:4px}
+  .cta{display:block;margin:34px auto 0;background:linear-gradient(180deg,var(--blood2),var(--blood));
+    color:#fff;border:none;padding:14px 54px;border-radius:30px;font-size:17px;letter-spacing:6px;
+    font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(181,18,27,.4)}
+  .hint{text-align:center;color:#5a5360;font-size:12px;margin-top:14px;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="loop">
+    闯副本 <span class="sep">→</span> 挑词条凑 build <span class="sep">→</span>
+    活过 <b>4 轮</b> 毕业成卡 <span class="sep">→</span> 拿卡赌斗 <span class="sep">→</span>
+    赢了升星 · 输了 <b>撕卡</b>
+  </div>
+  <h1>轮 回 · 撕 卡</h1>
+  <div class="sub">无 限 词 条 &nbsp;·&nbsp; 致 敬 经 典 · 全 原 创</div>
+
+  <div class="label">选 择 你 的 第 一 次 轮 回</div>
+
+  <div class="grid">
+    <!-- 嗜血 -->
+    <div class="card">
+      <span class="sect s-blood">嗜血</span>
+      <div class="por">🔪</div>
+      <div class="name">陈阿炳<small>「肉案」</small></div>
+      <div class="bio">城南肉联厂最后一个屠夫，厂子倒了那天他没走，守着空冷库睡了三年。第一次轮回睁眼，手里还攥着那把卷了刃的剔骨刀。</div>
+      <div class="skill"><div class="sk-name">【撕咬】</div>
+        <div class="sk-desc">攻击概率附带流血，目标越虚弱伤害越高。</div></div>
+    </div>
+    <!-- 机巧 -->
+    <div class="card">
+      <span class="sect s-mech">机巧</span>
+      <div class="por">📐</div>
+      <div class="name">林深<small>「图纸」</small></div>
+      <div class="bio">桥梁工程师，算了一辈子荷载与裂缝。他不信鬼神，只信结构会在哪一秒崩塌——这让他每个副本都比别人多活一会儿。</div>
+      <div class="skill"><div class="sk-name">【护甲】</div>
+        <div class="sk-desc">开局一层护盾，每回合自动修复少量。</div></div>
+    </div>
+    <!-- 诡异 -->
+    <div class="card">
+      <span class="sect s-weird">诡异</span>
+      <div class="por">📻</div>
+      <div class="name">苏晚<small>「半句」</small></div>
+      <div class="bio">深夜电台主播，听众说她念到一半的故事总会成真。她自己也分不清，是预言，还是她说出口的东西爬进了现实。</div>
+      <div class="skill"><div class="sk-name">【幻觉】</div>
+        <div class="sk-desc">概率让对手攻击落空、误伤自己人。</div></div>
+    </div>
+    <!-- 天命 -->
+    <div class="card">
+      <span class="sect s-fate">天命</span>
+      <div class="por">🎲</div>
+      <div class="name">阿福<small>「连庄」</small></div>
+      <div class="bio">地下赌场的传奇，连庄四十把被人打断三根手指。可怪的是，断指那天他从一场大火里全身而退。</div>
+      <div class="skill"><div class="sk-name">【主角光环】</div>
+        <div class="sk-desc">濒死时一次概率免疫致命伤。</div></div>
+    </div>
+    <!-- 不死 -->
+    <div class="card">
+      <span class="sect s-undead">不死</span>
+      <div class="por">🧵</div>
+      <div class="name">周慎<small>「白布」</small></div>
+      <div class="bio">法医，验了上万具尸体，最后认不出活人和死人的区别。他给自己缝过三次伤口，针脚一次比一次熟练。</div>
+      <div class="skill"><div class="sk-name">【腐蚀】</div>
+        <div class="sk-desc">攻击削减对手护甲并叠加中毒。</div></div>
+    </div>
+  </div>
+
+  <button class="cta">进 入 轮 回</button>
+  <div class="hint">— 这是设计草图，仅展示风格与信息结构，非最终美术 —</div>
+</div>
+</body>
+</html>
