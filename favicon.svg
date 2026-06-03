@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e23b44"/>
+      <stop offset="1" stop-color="#8f0d15"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#0c0a0d"/>
+  <rect x="3.5" y="3.5" width="25" height="25" rx="5.5" fill="url(#g)" stroke="#3a0a0e" stroke-width="1"/>
+  <!-- 骰子「四」点 -->
+  <g fill="#f3ece1">
+    <circle cx="11" cy="11" r="2.6"/>
+    <circle cx="21" cy="11" r="2.6"/>
+    <circle cx="11" cy="21" r="2.6"/>
+    <circle cx="21" cy="21" r="2.6"/>
+  </g>
+</svg>
