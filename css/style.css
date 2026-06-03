@@ -1,0 +1,276 @@
+/* ===================== 设计变量 ===================== */
+:root {
+  --bg:    #0c0a0d;
+  --panel: #16121a;
+  --panel2:#1d1820;
+  --blood: #b5121b;
+  --blood2:#e23b44;
+  --ink:   #e8e2d9;
+  --muted: #8a8290;
+  --gold:  #caa45a;
+  --line:  #2a2330;
+}
+
+/* ===================== Reset ===================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ===================== Body ===================== */
+body {
+  background:
+    radial-gradient(900px 500px at 50% -10%, #2a0d10 0%, transparent 60%),
+    var(--bg);
+  color: var(--ink);
+  font-family: "PingFang SC", "Noto Serif SC", serif;
+  min-height: 100vh;
+  padding: 28px 18px 60px;
+}
+
+/* ===================== Screen 切换 ===================== */
+.screen  { display: block; }
+.hidden  { display: none !important; }
+
+/* ===================== 布局容器 ===================== */
+#app { max-width: 760px; margin: 0 auto; }
+
+/* ===================== 标题 ===================== */
+h1.title, h2.title {
+  font-size: 42px;
+  letter-spacing: 8px;
+  text-align: center;
+  font-weight: 800;
+  background: linear-gradient(180deg, #fff, #b5121b 140%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(181,18,27,.25);
+  margin-bottom: 24px;
+}
+h2.title { font-size: 28px; letter-spacing: 6px; }
+
+/* ===================== 分隔标签 ===================== */
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold);
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin: 8px 4px 16px;
+}
+.label::before, .label::after {
+  content: "";
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+  flex: 1;
+}
+
+/* ===================== 按钮 ===================== */
+.cta {
+  display: block;
+  margin: 20px auto;
+  background: linear-gradient(180deg, var(--blood2), var(--blood));
+  color: #fff;
+  border: none;
+  padding: 14px 54px;
+  border-radius: 30px;
+  font-size: 17px;
+  letter-spacing: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(181,18,27,.4);
+  font-family: inherit;
+  transition: .15s;
+}
+.cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(181,18,27,.5); }
+.cta:active { transform: none; }
+
+.btn {
+  display: inline-block;
+  background: var(--panel2);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: .15s;
+  margin: 6px 4px;
+}
+.btn:hover { border-color: var(--blood); color: var(--blood2); }
+.btn.on    { border-color: var(--blood2); color: var(--blood2); background: #2a0d10; }
+.btn:disabled { opacity: .4; cursor: default; }
+
+/* ===================== 卡片幸存者 ===================== */
+.reveal {
+  background: linear-gradient(180deg, var(--panel2), var(--panel));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.name small {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-left: 8px;
+}
+
+.bio {
+  color: #b3aab6;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 12px 0 14px;
+}
+
+.skill {
+  background: #0e0b12;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 9px 11px;
+  margin-bottom: 10px;
+}
+.skill.pick {
+  cursor: pointer;
+  transition: .15s;
+  margin-bottom: 8px;
+}
+.skill.pick:hover { border-color: var(--blood); }
+
+.sk-name { color: var(--blood2); font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+.sk-desc  { color: var(--muted); font-size: 12px; line-height: 1.6; margin-top: 4px; }
+
+.stats {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin: 10px 0;
+}
+
+.traits {
+  color: var(--blood2);
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 8px 0;
+}
+
+.synergy {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 6px 0;
+  padding: 6px 10px;
+  border: 1px solid #4a3f1c;
+  border-radius: 8px;
+  background: rgba(202,164,90,.06);
+}
+
+/* ===================== 副本 UI ===================== */
+.cycle {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.hpbar {
+  color: var(--blood2);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.event {
+  background: var(--panel);
+  border-left: 3px solid var(--blood);
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.9;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 14px;
+}
+
+/* ===================== 骰子结果 ===================== */
+.roll {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 8px 0;
+  border: 1px solid var(--line);
+}
+.roll.ok  { background: rgba(134,181,138,.10); border-color: #234a2a; color: #86b58a; }
+.roll.bad { background: rgba(181,18,27,.10);   border-color: #5a1f24; color: var(--blood2); }
+
+/* ===================== 死亡 ===================== */
+.death {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: var(--blood2);
+  padding: 20px;
+  margin: 16px 0;
+  border: 1px solid var(--blood);
+  border-radius: 10px;
+  background: rgba(181,18,27,.07);
+}
+.death.ok {
+  color: #86b58a;
+  border-color: #234a2a;
+  background: rgba(134,181,138,.07);
+}
+
+/* ===================== 战报 ===================== */
+.battlelog {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 16px 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.rd {
+  font-size: 12.5px;
+  color: #b3aab6;
+  line-height: 1.8;
+  border-bottom: 1px solid var(--line);
+  padding: 5px 0;
+}
+.rd:last-child { border-bottom: none; }
+
+/* ===================== 卡码框 ===================== */
+.codebox {
+  margin: 14px 0;
+}
+.codebox textarea {
+  width: 100%;
+  background: #0e0b12;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-family: "SF Mono", "Menlo", monospace;
+  padding: 10px;
+  resize: vertical;
+  min-height: 72px;
+  margin-top: 6px;
+}
+
+/* ===================== 打法选择排 ===================== */
+.styles { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+
+/* ===================== 滚动条 ===================== */
+.battlelog::-webkit-scrollbar { width: 4px; }
+.battlelog::-webkit-scrollbar-track { background: var(--panel); }
+.battlelog::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
