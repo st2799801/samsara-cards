@@ -16,4 +16,12 @@ export const BIOS = [
     text:'急诊科护士，见惯了从鬼门关拉回来的人。她总觉得，只要还在呼吸，就没到该放手的时候。' },
   { id:'priest',   nick:'夜枭', startTrait:'fear',
     text:'走南闯北的算命先生，专挑半夜出摊。他不算别人的命，只算什么时候该跑。' },
+  { id:'diver',    nick:'深渊', startTrait:'dodge',
+    text:'职业潜水员，下过最深的地方连声纳都没信号。他说那里有什么在看他，但他每次都游回来了。' },
+  { id:'chemist',  nick:'烟雾', startTrait:'poison',
+    text:'化工厂事故调查员，去过十一个现场，每次都是最后一个离开的人。他的嗅觉早就废了，这反而是件好事。' },
+  { id:'locksmith',nick:'断簧', startTrait:'crit',
+    text:'开锁匠，专门给人捞忘在车里的钥匙。后来有人给他更大的锁——他发现最难的从来不是机关，是时机。' },
+  { id:'boxer',    nick:'钝器', startTrait:'frenzy',
+    text:'退役散打选手，左耳已经听不清声音了。他说打架靠的不是力气，是在对方打出第一拳之前，你已经打完三拳。' },
 ];
