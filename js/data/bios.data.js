@@ -1,0 +1,19 @@
+// startTrait 必须是 traits.data.js 中存在的 id（保证技能跟着小传走）
+export const BIOS = [
+  { id:'butcher',  nick:'肉案', startTrait:'bite',
+    text:'城南肉联厂最后一个屠夫，厂子倒了那天他没走，守着空冷库睡了三年。睁眼时手里还攥着卷了刃的剔骨刀。' },
+  { id:'engineer', nick:'图纸', startTrait:'armor',
+    text:'桥梁工程师，算了一辈子荷载与裂缝。不信鬼神，只信结构会在哪一秒崩塌——这让他每个副本都比别人多活一会儿。' },
+  { id:'radio',    nick:'半句', startTrait:'illusion',
+    text:'深夜电台主播，听众说她念到一半的故事总会成真。她自己也分不清，是预言，还是说出口的东西爬进了现实。' },
+  { id:'medic',    nick:'白布', startTrait:'corrode',
+    text:'法医，验了上万具尸体，最后认不出活人和死人的区别。他给自己缝过三次伤口，针脚一次比一次熟练。' },
+  { id:'gambler',  nick:'连庄', startTrait:'halo',
+    text:'地下赌场传奇，连庄四十把被打断三根手指。可怪的是，断指那天他从一场大火里全身而退。' },
+  { id:'scavenger',nick:'拾荒', startTrait:'trap',
+    text:'城郊垃圾场的常客，能从废铁里摸出还能用的东西。他说世界末日那天，他大概是最不慌的人。' },
+  { id:'nurse',    nick:'活死', startTrait:'regen',
+    text:'急诊科护士，见惯了从鬼门关拉回来的人。她总觉得，只要还在呼吸，就没到该放手的时候。' },
+  { id:'priest',   nick:'夜枭', startTrait:'fear',
+    text:'走南闯北的算命先生，专挑半夜出摊。他不算别人的命，只算什么时候该跑。' },
+];
